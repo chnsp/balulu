@@ -1,1 +1,35 @@
 Source code for Balulu Avionics
+
+Examples for individual components:
+
+SD Card Logger - CardInfo contains a sketch for listing the files on
+  the SD Card as a litmus test to make sure the board is working.
+
+GPS Module - GPStest_RMC contains a sketch for parsing the raw data
+  from the GPS and printing it out to the serial port.
+
+Transmitter - The MorseCode directory and sketch contains a standalone
+  example for sending audio over the transmitter on channel 144.390           
+
+Xastir/Soundmodem - 
+  etc/ax25/soundmodem.conf is a working soundmodem conf that can be copied
+  to the system etc.                  
+
+  Steps to get soundmodem/xastir working after copying the soundmodem.conf over.
+
+  1. Run: sudo soundmodemconfig
+  2. Click on 'Channel 0' and then Diagnostics->Modem
+     This should allow you to see packets coming in. 
+  
+
+  3. Run: sudo xastir
+  4. Interface->Interface Control
+  5. Click "Add" -> Serial KISS TNC
+     Change "TNC Port" to /dev/soundmodem0
+     Unclick "Allow Transmitting?"
+     Change "Port Settings" to 1200 bps
+     Click Ok
+  6. Click on the Device you just added, and then click "Start"
+  
+  Stations should start showing up after a while on the map.
+  View->Incoming Data is a useful dialog for viewing incoming packets.
