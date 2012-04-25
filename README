@@ -8,14 +8,22 @@ SD Card Logger - CardInfo contains a sketch for listing the files on
 GPS Module - GPStest_RMC contains a sketch for parsing the raw data
   from the GPS and printing it out to the serial port.
 
+  Documentation: http://www.ladyada.net/make/gpsshield/index.html
+
 Transmitter - The MorseCode directory and sketch contains a standalone
   example for sending audio over the transmitter on channel 144.390           
+
+  Programming the AX.25 Shield: 
+    http://wiki.argentdata.com/index.php?title=Radio_Shield#Display_Incoming_Packets
+  Code for the AX.25 Chip: http://www.argentdata.com/support/source-code.html
 
 Xastir/Soundmodem - 
   etc/ax25/soundmodem.conf is a working soundmodem conf that can be copied
   to the system etc.                  
 
   Steps to get soundmodem/xastir working after copying the soundmodem.conf over.
+
+  0. Run: sudo soundmodem
 
   1. Run: sudo soundmodemconfig
   2. Click on 'Channel 0' and then Diagnostics->Modem

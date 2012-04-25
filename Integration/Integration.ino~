@@ -1,0 +1,12 @@
+/*
+ * Pins:
+ *  0,1: Hardware Serial used by AX.25 Chip
+ *  2,3: SoftwareSerial used by GPS
+ */
+
+#include "Arduino.h"
+#include "SoftwareSerial.h"
+
+SoftwareSerial mySerial = SoftwareSerial(2, 3);
+
+
